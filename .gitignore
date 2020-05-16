@@ -1,0 +1,4 @@
+__pycache__
+venv/
+# Configuration file for the bot containing the API Key and greeting and caption messages.
+config.py
