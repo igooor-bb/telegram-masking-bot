@@ -24,8 +24,8 @@ def photo(update, context):
     """
     context.bot.send_message(chat_id=update.effective_message.chat_id, text=config.caption)
     photo_bytes = update.message.photo[-1].get_file().download_as_bytearray()
-    
-    msg = context.bot.send_photo(chat_id=update.effective_message.chat_id, photo=image.generate_image(photo_bytes))
+    photo_caption = update.message.caption
+    msg = context.bot.send_photo(chat_id=update.effective_message.chat_id, photo=image.generate_image(photo_bytes, photo_caption))
 
 def sticker(update, context):
     """
